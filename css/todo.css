@@ -1,0 +1,25 @@
+
+.todo{
+    margin-top: 20%;
+    margin-left: 50%;
+    display: block;
+    width: 100%;
+    background-color: beige;
+    padding: 3%;
+}
+.todo input{
+    border: 0;
+    padding: 1%;
+    width: 70%;
+}
+.addButton, .editButton, .removeButton{
+    border: 0;
+    background-color: darkcyan;
+    padding: 1%;
+    color: aliceblue;
+    width: 20%;
+    margin-left: 2%;
+}
+.todo li{
+    padding-top: 2%;
+}
