@@ -1,25 +1,74 @@
-
-.todo{
-    margin-top: 20%;
-    margin-left: 50%;
+:root {
+    --html-background:#ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+    --nav-background:#182848;
+    --nav-hover:#35456b;
+  }
+html{
+    background-color: var(--html-background);
+}
+body{
+    margin: 5%;
+    background-color: white;
+    height: 100%;
+    padding: 2%;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#logo{
+    width: 80px;
+    height: 80px;
+}
+nav> ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:var(--nav-background);
+  }
+  
+  nav> ul> li {
+    float: left;
+  }
+  
+  nav> ul> li> a {
     display: block;
-    width: 100%;
-    background-color: beige;
-    padding: 3%;
-}
-.todo input{
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+  }
+  .login{
+      float:right;
+  }
+  nav>ul>li >a:hover:not(.active) {
+    background-color:var(--nav-hover);
+  }
+  input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .editButton, .deleteButton, .addButton{   
+    padding: 1% 3% 1% 3%;
+    text-align: center;
     border: 0;
-    padding: 1%;
-    width: 70%;
-}
-.addButton, .editButton, .removeButton{
-    border: 0;
-    background-color: darkcyan;
-    padding: 1%;
-    color: aliceblue;
-    width: 20%;
-    margin-left: 2%;
-}
-.todo li{
-    padding-top: 2%;
-}
+    background-color: var(--nav-background);
+    color: white;
+  }
+  .list{
+    padding: 1% 0% 1% 0%;
+  }
+  .editButton{
+    margin-right: 20%;
+  }
+  .editButton, .deleteButton{
+    margin-left: 1%;
+    float: right;
+  }
