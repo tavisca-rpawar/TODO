@@ -11,12 +11,19 @@ function addTask()
         listItem.className= "list";
         editButton.className="editButton";
 	    deleteButton.innerText="Delete";
-	    deleteButton.className="deleteButton";
+        deleteButton.className="deleteButton";
+        deleteButton.addEventListener("click", deleteTask);
         listItem.appendChild(textnode);
         listItem.appendChild(editButton);
         listItem.appendChild(deleteButton);
-
         document.getElementById("todoList").appendChild(listItem);
     }
 
+}
+function deleteTask()
+{
+    var listItem=this.parentNode;
+	var ul=listItem.parentNode;
+	//Remove the parent list item from the ul.
+	ul.removeChild(listItem);
 }
